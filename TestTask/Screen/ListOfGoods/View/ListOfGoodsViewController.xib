@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListOfGoodsViewController" customModule="TestTask" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="gjb-dp-w7X" id="Gqh-tA-eiG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-4j-I24">
+                    <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Список товаров" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sF6-BJ-4Dh">
+                            <rect key="frame" x="140.5" y="21.5" width="133.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2td-N7-TVE">
+                            <rect key="frame" x="16" y="12" width="43.5" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="2td-N7-TVE" secondAttribute="height" multiplier="12:11" id="LVF-LT-3ga"/>
+                                <constraint firstAttribute="height" constant="40" id="RJ2-u5-ihH"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="arrow.up.arrow.down" catalog="system"/>
+                            <connections>
+                                <action selector="tappedSortButton:" destination="-1" eventType="touchUpInside" id="B08-1o-1cg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="2td-N7-TVE" firstAttribute="leading" secondItem="c4a-4j-I24" secondAttribute="leading" constant="16" id="TrR-De-npa"/>
+                        <constraint firstAttribute="height" constant="64" id="YdU-X2-h8Y"/>
+                        <constraint firstItem="sF6-BJ-4Dh" firstAttribute="centerX" secondItem="c4a-4j-I24" secondAttribute="centerX" id="amK-t8-zjq"/>
+                        <constraint firstItem="2td-N7-TVE" firstAttribute="centerY" secondItem="c4a-4j-I24" secondAttribute="centerY" id="deR-J2-3re"/>
+                        <constraint firstItem="sF6-BJ-4Dh" firstAttribute="centerY" secondItem="c4a-4j-I24" secondAttribute="centerY" id="dif-4z-c78"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gjb-dp-w7X">
+                    <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gjb-dp-w7X" firstAttribute="top" secondItem="c4a-4j-I24" secondAttribute="bottom" id="3B7-1j-ZBd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c4a-4j-I24" secondAttribute="trailing" id="Bj7-LJ-7F6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gjb-dp-w7X" secondAttribute="trailing" id="DP0-ci-l5C"/>
+                <constraint firstItem="c4a-4j-I24" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DPn-Qt-wy0"/>
+                <constraint firstItem="c4a-4j-I24" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Kb4-9g-L6P"/>
+                <constraint firstItem="gjb-dp-w7X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="leF-UX-uBw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gjb-dp-w7X" secondAttribute="bottom" id="nl8-Sm-iGK"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="130"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.up.arrow.down" catalog="system" width="128" height="98"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
